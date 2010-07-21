@@ -1,9 +1,9 @@
 # norootforbuild
 
 Name:           truecrypt
-Version:        6.3a
+Version:        7.0
 Release:        1.0
-License:        TrueCrypt License Version 2.8
+License:        TrueCrypt License Version 3.0
 Group:          Productivity/Security
 Url:            http://www.truecrypt.org
 Source:         %{name}-%{version}-source.tar.bz2
@@ -12,6 +12,7 @@ Patch1:         truecrypt-6.3a-compile.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:  fuse-devel
 BuildRequires:  gcc-c++
+BuildRequires:  nasm
 BuildRequires:  pkcs11-helper-devel
 BuildRequires:  update-desktop-files
 BuildRequires:  wxGTK-devel
@@ -44,8 +45,6 @@ Authors:
 %setup -qn truecrypt-%{version}-source
 %patch0
 %patch1
-# fix source
-%__sed -i 's/\r//' Release/Setup\ Files/License.txt
 
 %build
 export CFLAGS="%{optflags}"
