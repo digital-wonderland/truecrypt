@@ -1,7 +1,7 @@
 # norootforbuild
 
 Name:           truecrypt
-Version:        7.0
+Version:        7.0a
 Release:        1.0
 License:        TrueCrypt License Version 3.0
 Group:          Productivity/Security
