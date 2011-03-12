@@ -18,6 +18,8 @@ BuildRequires:  update-desktop-files
 
 %if 0%{?suse_version} > 1130
 BuildRequires:  wxWidgets-wxcontainer-devel
+%define _use_internal_dependency_generator 0
+%define __find_requires %wx_requires
 %else
 BuildRequires:  wxGTK-devel
 %endif
